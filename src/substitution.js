@@ -30,28 +30,29 @@ function substitution(input, alphabet, encode = true) {
     const char = input[i].toLowerCase();
     const isALetter = abcd.includes(char);
   
-    if (isALetter === false) {
-    encryptedMessage += char;
-    } else {
-    const charIndex = abcd.indexOf(char);
-    const newLetter = alphabet[charIndex];
-    encryptedMessage += newLetter
-    }
+     if (isALetter === false) {
+       encryptedMessage += char;
+     }else {
+       const charIndex = abcd.indexOf(char);
+       const newLetter = alphabet[charIndex];
+       encryptedMessage += newLetter
+     }
+   }
   }
-  }
+ 
   if(encode === false){
     for (let i = 0; i < input.length; i++) {
-    const char = input[i].toLowerCase();
-    const isALetter = alphabet.includes(char);
+      const char = input[i].toLowerCase();
+      const isALetter = alphabet.includes(char);
   
-    if (isALetter === false) {
-    encryptedMessage += char;
-    } else {
-    const charIndex = alphabet.indexOf(char);
-    const newLetter = abcd[charIndex];
-    encryptedMessage += newLetter
-  }
-  }
+      if (isALetter === false) {
+       encryptedMessage += char;
+      }else {
+       const charIndex = alphabet.indexOf(char);
+       const newLetter = abcd[charIndex];
+       encryptedMessage += newLetter
+      }
+    }
   }
 
   return encryptedMessage.toLowerCase();
