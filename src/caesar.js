@@ -21,13 +21,12 @@ const caesarModule = (function () {
   
       for (let i = 0; i < lowerInput.length; i++) {
         const charCode = lowerInput.charCodeAt(i);
-        //If the character is not in the alphabet, record the character as is
+      
         if (charCode < 65 || charCode > 122 || (charCode > 90 && charCode < 97)) {
           encryptedMessage += lowerInput[i];
         } else {
           let newCharCode = charCode + shift;
   
-          //lowercase wraparound, positive shift
           if (charCode >= 97 && newCharCode > 122) {
             newCharCode = newCharCode - 122 + 96;
           }
