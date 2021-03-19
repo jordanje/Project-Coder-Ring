@@ -35,8 +35,6 @@ const polybiusModule = (function () {
   }
    //decode
   function numberToLetter(input){
-    
-
     let decryptedMessage = ""
   
      for(let i = 0; i< input.length; i+=2){
@@ -50,12 +48,11 @@ const polybiusModule = (function () {
         let letterCoordinates = alphabet[numInput2][numInput]
         decryptedMessage += letterCoordinates.toLowerCase()
      }
-     }
+    }
   
     return decryptedMessage
   }
   
-
   function polybius(input, encode = true) {
     if (!input) return false;
 
